@@ -1,0 +1,18 @@
+
+After testing the testdot program by providing different data sizes my observations were as follows:
+
+1) The tests ran on the smaller data(8000) set suggest that, the time spent by each process in calculating the vector product values is much smaller than the time spent in communicating with other processes. 
+
+2) This can also be verified by observing the change of the speed up gained as the number of iterations and the number of processes increase.
+
+3) The fact the inter process communication has a substantial impact can be observed by comparing the Matlab results of execution.
+
+4) As the data increases we start gaining speedup. For larger data like 80000000 we start gaining speedup. For such large data as the number of iterations increase   the speedup gained also increases.
+
+Conclusions:
+
+1) When the data size is small there is no real speedup gained because the interprocess communication is an overhead.
+
+2) However when the data size increases the speedup also increases.
+
+3) This case is also not linear which means that it is not necessary that as the data increases the speedup also increases. If the number of processes is more and the data size is not very very large then still the interprocess communication plays a role.
